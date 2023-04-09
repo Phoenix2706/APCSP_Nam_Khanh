@@ -1,12 +1,9 @@
 import random
-
 # import the function "random" to use later when deciding computer's hand
 
 user_score = 0
 computer_score = 0
 play_count = 0
-
-
 # set the scoreboard and play count
 
 
@@ -33,11 +30,11 @@ def show_result(user_input, computer_input):
         print("You lose! I get a point!")
         winner = 0
 
-    elif user_input == "paper" and computer_input == "scissors":
+    elif user_input == "paper" and computer_input == "rock":
         print("You win! You get a point!")
         winner = 1
 
-    elif user_input == "paper" and computer_input == "rock":
+    elif user_input == "paper" and computer_input == "scissors":
         print("You lose! I get a point!")
         winner = 0
 
@@ -55,7 +52,7 @@ def show_result(user_input, computer_input):
         winner = 2
 
     return winner
-# the user score and computer score will change accordingly to the value returned
+# return the value "winner" to increment either the user's score or the computer's score.
 
 
 print("Hello and welcome to Rock, Paper, Scissors!")
@@ -83,7 +80,7 @@ while play_count < play_count_request:
         # check to see if the play count has reached the requested play count.
         # Display the final scoreboard and end the game if it does.
         print("---------------------------------------------------------")
-        print("You have reached the requested turns! ")
+        print("Your turns have ran out! ")
         print("--------------------FINAL SCOREBOARD---------------------")
         print(user_name + ":" + str(user_score))
         print("MOUNTAIN DEW-BOT: " + str(computer_score))
