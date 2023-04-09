@@ -8,7 +8,7 @@ play_count = 0
 
 
 def play_game():
-    user_hand = input("Choose your weapon: rock, paper, scissors? ").lower()
+    user_hand = input("Choose your weapon: rock, paper, or scissors? ").lower()
     # receives input as user's hand
     outcomes = ["rock", "paper", "scissors"]
     computer_hand = random.choice(outcomes)
